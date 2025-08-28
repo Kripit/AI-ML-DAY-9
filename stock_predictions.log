@@ -1,0 +1,215 @@
+2025-08-28 21:45:07,733 - __main__ - INFO - Running yfinance test... 
+2025-08-28 21:45:07,733 - __main__ - INFO - Testing yfinance download... 
+2025-08-28 21:45:09,238 - __main__ - INFO - Downloaded data shape: (251, 5) 
+2025-08-28 21:45:09,239 - __main__ - INFO - Columns: [('Close', 'AAPL'), ('High', 'AAPL'), ('Low', 'AAPL'), ('Open', 'AAPL'), ('Volume', 'AAPL')] 
+2025-08-28 21:45:09,239 - __main__ - INFO - Column types: <class 'pandas.core.indexes.multi.MultiIndex'> 
+2025-08-28 21:45:09,239 - __main__ - INFO - Index: DatetimeIndex(['2024-01-02', '2024-01-03', '2024-01-04', '2024-01-05',
+               '2024-01-08', '2024-01-09', '2024-01-10', '2024-01-11',
+               '2024-01-12', '2024-01-16',
+               ...
+               '2024-12-16', '2024-12-17', '2024-12-18', '2024-12-19',
+               '2024-12-20', '2024-12-23', '2024-12-24', '2024-12-26',
+               '2024-12-27', '2024-12-30'],
+              dtype='datetime64[ns]', name='Date', length=251, freq=None) 
+2025-08-28 21:45:09,264 - __main__ - INFO - First 3 rows:
+Price            Close        High         Low        Open    Volume
+Ticker            AAPL        AAPL        AAPL        AAPL      AAPL
+Date                                                                
+2024-01-02  184.081497  186.857993  182.346189  185.578815  82488700
+2024-01-03  182.703186  184.319507  181.890063  182.673439  58414500
+2024-01-04  180.382828  181.552914  179.361476  180.620803  71983600 
+2025-08-28 21:45:09,264 - __main__ - INFO - MultiIndex detected - flattening... 
+2025-08-28 21:45:09,265 - __main__ - INFO - Flattened columns: ['Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:09,265 - __main__ - INFO - After reset_index - columns: ['Date', 'Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:09,265 - __main__ - INFO - After reset_index - shape: (251, 6) 
+2025-08-28 21:45:09,283 - __main__ - INFO - Step 1: Downloading stock data... 
+2025-08-28 21:45:09,283 - __main__ - INFO - Downloading AAPL data from 2020-08-29 to 2025-08-28 
+2025-08-28 21:45:09,790 - __main__ - INFO - Flattened MultiIndex columns to: ['Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:09,790 - __main__ - INFO - Cleaning raw data for AAPL 
+2025-08-28 21:45:09,791 - __main__ - INFO - Original data shape: (1254, 6) 
+2025-08-28 21:45:09,791 - __main__ - INFO - Original columns: ['Date', 'Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:09,822 - __main__ - INFO - Converted Open from float64 to numeric 
+2025-08-28 21:45:09,822 - __main__ - INFO - Converted High from float64 to numeric 
+2025-08-28 21:45:09,823 - __main__ - INFO - Converted Low from float64 to numeric 
+2025-08-28 21:45:09,823 - __main__ - INFO - Converted Close from float64 to numeric 
+2025-08-28 21:45:09,823 - __main__ - INFO - Converted Volume from int64 to numeric 
+2025-08-28 21:45:09,828 - __main__ - INFO - Close range: 103.93 to 258.10 
+2025-08-28 21:45:09,829 - __main__ - INFO - Volume range: 23234700.00 to 332607200.00 
+2025-08-28 21:45:09,829 - __main__ - INFO - Cleaned data shape: (1254, 6) 
+2025-08-28 21:45:09,829 - __main__ - INFO - Adding technical indicators... 
+2025-08-28 21:45:09,832 - __main__ - INFO - Technical indicators added. Final shape: (1254, 13) 
+2025-08-28 21:45:09,846 - __main__ - INFO - Downloaded and cleaned 1254 days of data for AAPL 
+2025-08-28 21:45:09,847 - __main__ - INFO - Preparing data splits for AAPL 
+2025-08-28 21:45:09,847 - __main__ - INFO - Data shape before splitting: (1254, 13) 
+2025-08-28 21:45:09,847 - __main__ - INFO - Date range: 2020-08-31 00:00:00 to 2025-08-27 00:00:00 
+2025-08-28 21:45:09,993 - __main__ - INFO - Fitting scaler on training data... 
+2025-08-28 21:45:09,993 - __main__ - INFO - Scaler input shape: (877, 8) 
+2025-08-28 21:45:10,008 - __main__ - INFO - Data split completed: Train=877, Val=188, Test=189 
+2025-08-28 21:45:10,009 - __main__ - INFO - Successfully processed AAPL 
+2025-08-28 21:45:10,009 - __main__ - INFO - Downloading GOOGL data from 2020-08-29 to 2025-08-28 
+2025-08-28 21:45:10,458 - __main__ - INFO - Flattened MultiIndex columns to: ['Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:10,459 - __main__ - INFO - Cleaning raw data for GOOGL 
+2025-08-28 21:45:10,459 - __main__ - INFO - Original data shape: (1254, 6) 
+2025-08-28 21:45:10,460 - __main__ - INFO - Original columns: ['Date', 'Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:10,490 - __main__ - INFO - Converted Open from float64 to numeric 
+2025-08-28 21:45:10,491 - __main__ - INFO - Converted High from float64 to numeric 
+2025-08-28 21:45:10,491 - __main__ - INFO - Converted Low from float64 to numeric 
+2025-08-28 21:45:10,492 - __main__ - INFO - Converted Close from float64 to numeric 
+2025-08-28 21:45:10,492 - __main__ - INFO - Converted Volume from int64 to numeric 
+2025-08-28 21:45:10,497 - __main__ - INFO - Close range: 70.05 to 208.49 
+2025-08-28 21:45:10,497 - __main__ - INFO - Volume range: 9312000.00 to 127490100.00 
+2025-08-28 21:45:10,497 - __main__ - INFO - Cleaned data shape: (1254, 6) 
+2025-08-28 21:45:10,497 - __main__ - INFO - Adding technical indicators... 
+2025-08-28 21:45:10,500 - __main__ - INFO - Technical indicators added. Final shape: (1254, 13) 
+2025-08-28 21:45:10,512 - __main__ - INFO - Downloaded and cleaned 1254 days of data for GOOGL 
+2025-08-28 21:45:10,512 - __main__ - INFO - Preparing data splits for GOOGL 
+2025-08-28 21:45:10,512 - __main__ - INFO - Data shape before splitting: (1254, 13) 
+2025-08-28 21:45:10,513 - __main__ - INFO - Date range: 2020-08-31 00:00:00 to 2025-08-27 00:00:00 
+2025-08-28 21:45:10,657 - __main__ - INFO - Fitting scaler on training data... 
+2025-08-28 21:45:10,658 - __main__ - INFO - Scaler input shape: (877, 8) 
+2025-08-28 21:45:10,672 - __main__ - INFO - Data split completed: Train=877, Val=188, Test=189 
+2025-08-28 21:45:10,672 - __main__ - INFO - Successfully processed GOOGL 
+2025-08-28 21:45:10,672 - __main__ - INFO - Downloading MSFT data from 2020-08-29 to 2025-08-28 
+2025-08-28 21:45:11,321 - __main__ - INFO - Flattened MultiIndex columns to: ['Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:11,321 - __main__ - INFO - Cleaning raw data for MSFT 
+2025-08-28 21:45:11,321 - __main__ - INFO - Original data shape: (1254, 6) 
+2025-08-28 21:45:11,322 - __main__ - INFO - Original columns: ['Date', 'Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:11,353 - __main__ - INFO - Converted Open from float64 to numeric 
+2025-08-28 21:45:11,354 - __main__ - INFO - Converted High from float64 to numeric 
+2025-08-28 21:45:11,354 - __main__ - INFO - Converted Low from float64 to numeric 
+2025-08-28 21:45:11,355 - __main__ - INFO - Converted Close from float64 to numeric 
+2025-08-28 21:45:11,355 - __main__ - INFO - Converted Volume from int64 to numeric 
+2025-08-28 21:45:11,360 - __main__ - INFO - Close range: 192.14 to 534.76 
+2025-08-28 21:45:11,361 - __main__ - INFO - Volume range: 7164500.00 to 90428900.00 
+2025-08-28 21:45:11,361 - __main__ - INFO - Cleaned data shape: (1254, 6) 
+2025-08-28 21:45:11,361 - __main__ - INFO - Adding technical indicators... 
+2025-08-28 21:45:11,364 - __main__ - INFO - Technical indicators added. Final shape: (1254, 13) 
+2025-08-28 21:45:11,376 - __main__ - INFO - Downloaded and cleaned 1254 days of data for MSFT 
+2025-08-28 21:45:11,376 - __main__ - INFO - Preparing data splits for MSFT 
+2025-08-28 21:45:11,377 - __main__ - INFO - Data shape before splitting: (1254, 13) 
+2025-08-28 21:45:11,377 - __main__ - INFO - Date range: 2020-08-31 00:00:00 to 2025-08-27 00:00:00 
+2025-08-28 21:45:11,577 - __main__ - INFO - Fitting scaler on training data... 
+2025-08-28 21:45:11,578 - __main__ - INFO - Scaler input shape: (877, 8) 
+2025-08-28 21:45:11,592 - __main__ - INFO - Data split completed: Train=877, Val=188, Test=189 
+2025-08-28 21:45:11,592 - __main__ - INFO - Successfully processed MSFT 
+2025-08-28 21:45:11,592 - __main__ - INFO - Downloading TSLA data from 2020-08-29 to 2025-08-28 
+2025-08-28 21:45:12,043 - __main__ - INFO - Flattened MultiIndex columns to: ['Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:12,044 - __main__ - INFO - Cleaning raw data for TSLA 
+2025-08-28 21:45:12,044 - __main__ - INFO - Original data shape: (1254, 6) 
+2025-08-28 21:45:12,044 - __main__ - INFO - Original columns: ['Date', 'Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:12,076 - __main__ - INFO - Converted Open from float64 to numeric 
+2025-08-28 21:45:12,076 - __main__ - INFO - Converted High from float64 to numeric 
+2025-08-28 21:45:12,076 - __main__ - INFO - Converted Low from float64 to numeric 
+2025-08-28 21:45:12,077 - __main__ - INFO - Converted Close from float64 to numeric 
+2025-08-28 21:45:12,077 - __main__ - INFO - Converted Volume from int64 to numeric 
+2025-08-28 21:45:12,082 - __main__ - INFO - Close range: 108.10 to 479.86 
+2025-08-28 21:45:12,082 - __main__ - INFO - Volume range: 29401800.00 to 666378600.00 
+2025-08-28 21:45:12,082 - __main__ - INFO - Cleaned data shape: (1254, 6) 
+2025-08-28 21:45:12,083 - __main__ - INFO - Adding technical indicators... 
+2025-08-28 21:45:12,085 - __main__ - INFO - Technical indicators added. Final shape: (1254, 13) 
+2025-08-28 21:45:12,098 - __main__ - INFO - Downloaded and cleaned 1254 days of data for TSLA 
+2025-08-28 21:45:12,098 - __main__ - INFO - Preparing data splits for TSLA 
+2025-08-28 21:45:12,098 - __main__ - INFO - Data shape before splitting: (1254, 13) 
+2025-08-28 21:45:12,099 - __main__ - INFO - Date range: 2020-08-31 00:00:00 to 2025-08-27 00:00:00 
+2025-08-28 21:45:12,240 - __main__ - INFO - Fitting scaler on training data... 
+2025-08-28 21:45:12,241 - __main__ - INFO - Scaler input shape: (877, 8) 
+2025-08-28 21:45:12,256 - __main__ - INFO - Data split completed: Train=877, Val=188, Test=189 
+2025-08-28 21:45:12,256 - __main__ - INFO - Successfully processed TSLA 
+2025-08-28 21:45:12,256 - __main__ - INFO - Downloading AMZN data from 2020-08-29 to 2025-08-28 
+2025-08-28 21:45:12,693 - __main__ - INFO - Flattened MultiIndex columns to: ['Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:12,694 - __main__ - INFO - Cleaning raw data for AMZN 
+2025-08-28 21:45:12,694 - __main__ - INFO - Original data shape: (1254, 6) 
+2025-08-28 21:45:12,694 - __main__ - INFO - Original columns: ['Date', 'Close', 'High', 'Low', 'Open', 'Volume'] 
+2025-08-28 21:45:12,727 - __main__ - INFO - Converted Open from float64 to numeric 
+2025-08-28 21:45:12,727 - __main__ - INFO - Converted High from float64 to numeric 
+2025-08-28 21:45:12,728 - __main__ - INFO - Converted Low from float64 to numeric 
+2025-08-28 21:45:12,728 - __main__ - INFO - Converted Close from float64 to numeric 
+2025-08-28 21:45:12,728 - __main__ - INFO - Converted Volume from int64 to numeric 
+2025-08-28 21:45:12,733 - __main__ - INFO - Close range: 81.82 to 242.06 
+2025-08-28 21:45:12,733 - __main__ - INFO - Volume range: 15007500.00 to 272662000.00 
+2025-08-28 21:45:12,733 - __main__ - INFO - Cleaned data shape: (1254, 6) 
+2025-08-28 21:45:12,734 - __main__ - INFO - Adding technical indicators... 
+2025-08-28 21:45:12,736 - __main__ - INFO - Technical indicators added. Final shape: (1254, 13) 
+2025-08-28 21:45:12,748 - __main__ - INFO - Downloaded and cleaned 1254 days of data for AMZN 
+2025-08-28 21:45:12,748 - __main__ - INFO - Preparing data splits for AMZN 
+2025-08-28 21:45:12,748 - __main__ - INFO - Data shape before splitting: (1254, 13) 
+2025-08-28 21:45:12,749 - __main__ - INFO - Date range: 2020-08-31 00:00:00 to 2025-08-27 00:00:00 
+2025-08-28 21:45:12,894 - __main__ - INFO - Fitting scaler on training data... 
+2025-08-28 21:45:12,894 - __main__ - INFO - Scaler input shape: (877, 8) 
+2025-08-28 21:45:12,909 - __main__ - INFO - Data split completed: Train=877, Val=188, Test=189 
+2025-08-28 21:45:12,909 - __main__ - INFO - Successfully processed AMZN 
+2025-08-28 21:45:12,909 - __main__ - INFO - Successfully processed 5 stocks: ['AAPL', 'GOOGL', 'MSFT', 'TSLA', 'AMZN'] 
+2025-08-28 21:45:12,910 - __main__ - INFO - Found 5 files in train: ['AAPL_train.csv', 'AMZN_train.csv', 'GOOGL_train.csv', 'MSFT_train.csv', 'TSLA_train.csv'] 
+2025-08-28 21:45:12,911 - __main__ - INFO - Found 5 files in val: ['AAPL_val.csv', 'AMZN_val.csv', 'GOOGL_val.csv', 'MSFT_val.csv', 'TSLA_val.csv'] 
+2025-08-28 21:45:12,911 - __main__ - INFO - Found 5 files in test: ['AAPL_test.csv', 'AMZN_test.csv', 'GOOGL_test.csv', 'MSFT_test.csv', 'TSLA_test.csv'] 
+2025-08-28 21:45:12,911 - __main__ - INFO - Step 2: Creating datasets... 
+2025-08-28 21:45:12,911 - __main__ - INFO - Found 5 CSV files in ./stock_data\train: ['AAPL_train.csv', 'AMZN_train.csv', 'GOOGL_train.csv', 'MSFT_train.csv', 'TSLA_train.csv'] 
+2025-08-28 21:45:12,929 - __main__ - INFO - Processing AAPL_train.csv - Shape: (877, 9) 
+2025-08-28 21:45:12,944 - __main__ - INFO - Added 817 sequences from AAPL_train.csv 
+2025-08-28 21:45:12,958 - __main__ - INFO - Processing AMZN_train.csv - Shape: (877, 9) 
+2025-08-28 21:45:12,975 - __main__ - INFO - Added 817 sequences from AMZN_train.csv 
+2025-08-28 21:45:12,991 - __main__ - INFO - Processing GOOGL_train.csv - Shape: (877, 9) 
+2025-08-28 21:45:13,008 - __main__ - INFO - Added 817 sequences from GOOGL_train.csv 
+2025-08-28 21:45:13,028 - __main__ - INFO - Processing MSFT_train.csv - Shape: (877, 9) 
+2025-08-28 21:45:13,044 - __main__ - INFO - Added 817 sequences from MSFT_train.csv 
+2025-08-28 21:45:13,063 - __main__ - INFO - Processing TSLA_train.csv - Shape: (877, 9) 
+2025-08-28 21:45:13,079 - __main__ - INFO - Added 817 sequences from TSLA_train.csv 
+2025-08-28 21:45:13,084 - __main__ - INFO - Created 4085 sequences for train set 
+2025-08-28 21:45:13,085 - __main__ - INFO - Found 5 CSV files in ./stock_data\val: ['AAPL_val.csv', 'AMZN_val.csv', 'GOOGL_val.csv', 'MSFT_val.csv', 'TSLA_val.csv'] 
+2025-08-28 21:45:13,101 - __main__ - INFO - Processing AAPL_val.csv - Shape: (188, 9) 
+2025-08-28 21:45:13,106 - __main__ - INFO - Added 128 sequences from AAPL_val.csv 
+2025-08-28 21:45:13,124 - __main__ - INFO - Processing AMZN_val.csv - Shape: (188, 9) 
+2025-08-28 21:45:13,129 - __main__ - INFO - Added 128 sequences from AMZN_val.csv 
+2025-08-28 21:45:13,143 - __main__ - INFO - Processing GOOGL_val.csv - Shape: (188, 9) 
+2025-08-28 21:45:13,148 - __main__ - INFO - Added 128 sequences from GOOGL_val.csv 
+2025-08-28 21:45:13,162 - __main__ - INFO - Processing MSFT_val.csv - Shape: (188, 9) 
+2025-08-28 21:45:13,167 - __main__ - INFO - Added 128 sequences from MSFT_val.csv 
+2025-08-28 21:45:13,182 - __main__ - INFO - Processing TSLA_val.csv - Shape: (188, 9) 
+2025-08-28 21:45:13,188 - __main__ - INFO - Added 128 sequences from TSLA_val.csv 
+2025-08-28 21:45:13,188 - __main__ - INFO - Created 640 sequences for val set 
+2025-08-28 21:45:13,189 - __main__ - INFO - Found 5 CSV files in ./stock_data\test: ['AAPL_test.csv', 'AMZN_test.csv', 'GOOGL_test.csv', 'MSFT_test.csv', 'TSLA_test.csv'] 
+2025-08-28 21:45:13,209 - __main__ - INFO - Processing AAPL_test.csv - Shape: (189, 9) 
+2025-08-28 21:45:13,214 - __main__ - INFO - Added 129 sequences from AAPL_test.csv 
+2025-08-28 21:45:13,230 - __main__ - INFO - Processing AMZN_test.csv - Shape: (189, 9) 
+2025-08-28 21:45:13,234 - __main__ - INFO - Added 129 sequences from AMZN_test.csv 
+2025-08-28 21:45:13,250 - __main__ - INFO - Processing GOOGL_test.csv - Shape: (189, 9) 
+2025-08-28 21:45:13,255 - __main__ - INFO - Added 129 sequences from GOOGL_test.csv 
+2025-08-28 21:45:13,270 - __main__ - INFO - Processing MSFT_test.csv - Shape: (189, 9) 
+2025-08-28 21:45:13,276 - __main__ - INFO - Added 129 sequences from MSFT_test.csv 
+2025-08-28 21:45:13,289 - __main__ - INFO - Processing TSLA_test.csv - Shape: (189, 9) 
+2025-08-28 21:45:13,294 - __main__ - INFO - Added 129 sequences from TSLA_test.csv 
+2025-08-28 21:45:13,295 - __main__ - INFO - Created 645 sequences for test set 
+2025-08-28 21:45:13,295 - __main__ - INFO - Step 3: Initializing model... 
+2025-08-28 21:45:13,414 - __main__ - INFO - Model parameters: 105,474 total, 105,474 trainable 
+2025-08-28 21:45:13,414 - __main__ - INFO - Step 4: Training model... 
+2025-08-28 21:45:14,302 - __main__ - INFO - Starting model training 
+2025-08-28 21:45:27,815 - __main__ - INFO - New best model saved at epoch 1 
+2025-08-28 21:45:27,815 - __main__ - INFO - Epoch 1/100, Train Loss: 0.088955, Val Loss: 0.328189, LR: 0.0009998 
+2025-08-28 21:45:40,042 - __main__ - INFO - New best model saved at epoch 2 
+2025-08-28 21:45:40,042 - __main__ - INFO - Epoch 2/100, Train Loss: 0.051130, Val Loss: 0.252846, LR: 0.0009990 
+2025-08-28 21:45:52,579 - __main__ - INFO - New best model saved at epoch 3 
+2025-08-28 21:45:52,579 - __main__ - INFO - Epoch 3/100, Train Loss: 0.038186, Val Loss: 0.168769, LR: 0.0009978 
+2025-08-28 21:46:29,947 - __main__ - INFO - New best model saved at epoch 6 
+2025-08-28 21:46:29,947 - __main__ - INFO - Epoch 6/100, Train Loss: 0.032022, Val Loss: 0.124951, LR: 0.0009911 
+2025-08-28 21:47:07,904 - __main__ - INFO - New best model saved at epoch 9 
+2025-08-28 21:47:07,904 - __main__ - INFO - Epoch 9/100, Train Loss: 0.031111, Val Loss: 0.074737, LR: 0.0009801 
+2025-08-28 21:47:20,775 - __main__ - INFO - Epoch 10/100, Train Loss: 0.032304, Val Loss: 0.120818, LR: 0.0009755 
+2025-08-28 21:49:01,506 - __main__ - INFO - New best model saved at epoch 18 
+2025-08-28 21:49:01,506 - __main__ - INFO - Epoch 18/100, Train Loss: 0.026554, Val Loss: 0.072537, LR: 0.0004611 
+2025-08-28 21:49:26,492 - __main__ - INFO - Epoch 20/100, Train Loss: 0.026061, Val Loss: 0.116066, LR: 0.0004523 
+2025-08-28 21:50:18,473 - __main__ - INFO - New best model saved at epoch 24 
+2025-08-28 21:50:18,474 - __main__ - INFO - Epoch 24/100, Train Loss: 0.025829, Val Loss: 0.068590, LR: 0.0004322 
+2025-08-28 21:51:13,171 - __main__ - INFO - New best model saved at epoch 28 
+2025-08-28 21:51:13,171 - __main__ - INFO - Epoch 28/100, Train Loss: 0.025109, Val Loss: 0.041923, LR: 0.0004094 
+2025-08-28 21:51:37,879 - __main__ - INFO - Epoch 30/100, Train Loss: 0.025470, Val Loss: 0.082256, LR: 0.0003969 
+2025-08-28 21:53:45,375 - __main__ - INFO - Epoch 40/100, Train Loss: 0.025141, Val Loss: 0.043672, LR: 0.0001636 
+2025-08-28 21:54:22,907 - __main__ - INFO - Early stopping triggered at epoch 43 
+2025-08-28 21:54:22,907 - __main__ - INFO - Training completed! 
+2025-08-28 21:54:23,548 - __main__ - INFO - Step 5: Evaluating model... 
+2025-08-28 21:54:29,469 - __main__ - INFO - === Model Evaluation Results === 
+2025-08-28 21:54:29,469 - __main__ - INFO - Mean Squared Error (MSE): 201.9271 
+2025-08-28 21:54:29,469 - __main__ - INFO - Root Mean Squared Error (RMSE): 14.2101 
+2025-08-28 21:54:29,470 - __main__ - INFO - Mean Absolute Error (MAE): 10.5960 
+2025-08-28 21:54:29,470 - __main__ - INFO - Mean Absolute Percentage Error (MAPE): 4.83% 
+2025-08-28 21:54:29,470 - __main__ - INFO - R-squared Score: 0.7124 
+2025-08-28 21:54:29,758 - __main__ - INFO - Pipeline completed successfully! 
